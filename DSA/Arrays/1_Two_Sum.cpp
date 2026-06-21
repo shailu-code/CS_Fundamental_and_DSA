@@ -1,8 +1,18 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main()
+vector<int> twoSum(vector<int>& nums, int target)
 {
-    cout << "My first GitHub push";
-    return 0;
+    for(int i = 0; i < nums.size(); i++)
+    {
+        for(int j = i + 1; j < nums.size(); j++)
+        {
+            if(nums[i] + nums[j] == target)
+            {
+                return {i, j};
+            }
+        }
+    }
+    return {};
 }
